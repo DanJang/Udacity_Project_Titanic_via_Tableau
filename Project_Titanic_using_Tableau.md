@@ -1,4 +1,4 @@
-Titanic - Isolating the True Families using Visualization in Tableau[¶](#Titanic---Isolating-the-True-Families-using-Visualization-in-Tableau) 
+Titanic - Isolating the True Families using Visualization in Tableau
 ==============================================================================================================================================
 
 ### Links 
