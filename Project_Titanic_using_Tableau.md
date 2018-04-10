@@ -1,14 +1,14 @@
-Titanic - Isolating the True Families using Visualization in Tableau[¶](#Titanic---Isolating-the-True-Families-using-Visualization-in-Tableau) {#Titanic---Isolating-the-True-Families-using-Visualization-in-Tableau}
+Titanic - Isolating the True Families using Visualization in Tableau[¶](#Titanic---Isolating-the-True-Families-using-Visualization-in-Tableau) 
 ==============================================================================================================================================
 
-### Links[¶](#Links) {#Links}
+### Links 
 
 -   [Titanic.TrueFamilies.1.0](https://public.tableau.com/profile/daniel1932#!/vizhome/Titanic_TheSurvived_1_0/IsolatingTrueFamilyMembers?publish=yes),
     the first version
 -   [Titanic.TrueFamilies.2.0](https://public.tableau.com/profile/daniel1932#!/vizhome/Titanic_TrueFamilies_2_0/SampleSimilarityCalculation?publish=yes),
     the final version
 
-### Summary[¶](#Summary) {#Summary}
+### Summary 
 
 For example, a passenger 'Andersson, Miss. Erna Alexandra' looks like a
 member of 'Andersson' family. However, true 7 members of 'Andersson'
@@ -25,7 +25,7 @@ members. Mostly they stayed in 1st class cabin and their survival rate
 was 0.52, which is much higher than passengers traveled alone (0.28) and
 even survival rate in total(0.38)
 
-### Design[¶](#Design) {#Design}
+### Design 
 
 For the visualization I was aiming, which is not for understanding the
 data, but to harvest proper targets, I prepared 'SimilarityScore' data
@@ -72,13 +72,13 @@ visualization.\
     families have much higher survival rate and I chose bar chart for
     clear delivery of the finding
 
-### Feedback[¶](#Feedback) {#Feedback}
+### Feedback 
 
 Not much feedback so far through
 [https://discussions.udacity.com/t/feedback-needed-for-the-project-titanic/411674](https://discussions.udacity.com/t/feedback-needed-for-the-project-titanic/411674)\
  My family and friends shared following feedbacks
 
-#### Feedback. "You better make the mark a rectangle"[¶](#Feedback.-"You-better-make-the-mark-a-rectangle") {#Feedback.-"You-better-make-the-mark-a-rectangle"}
+#### Feedback. "You better make the mark a rectangle" 
 
 At the 1st version, at the 1st story point, I exemplified the graph
 using differenct mark shape and color - circle and blue. This feedback
@@ -86,7 +86,7 @@ says it is inconsistent and the viewer might be confused by the
 different shape and color in later worksheet. I strongly agreed and
 reflected the idea to the final version.
 
-#### Feedback. "Why do you need histogram?"[¶](#Feedback.-"Why-do-you-need-histogram?") {#Feedback.-"Why-do-you-need-histogram?"}
+#### Feedback. "Why do you need histogram?" 
 
 It makes sense in that the flow of the topic is just at the front of the
 conclusion and the histogram ruins the smooth transition. However, the
@@ -94,20 +94,20 @@ histogram of 'SimilarityScore' is meant for how many there are the weak
 similarities and provides a little of understanding and reliability on
 the data.
 
-#### Feedback. "What is 0 and 1 in your bar chart?"[¶](#Feedback.-"What-is-0-and-1-in-your-bar-chart?") {#Feedback.-"What-is-0-and-1-in-your-bar-chart?"}
+#### Feedback. "What is 0 and 1 in your bar chart?"
 
 At the 1st version, the bar chart has its column values - 0/1, which
 would be unkind. I accepted. 'Calculated Field' was created as
 'InGroup\_str' to have values either 'Family' or 'No Family'
 
-#### Feedback. "Your bar chart is meaninglessly colorful"[¶](#Feedback.-"Your-bar-chart-is-meaninglessly-colorful") {#Feedback.-"Your-bar-chart-is-meaninglessly-colorful"}
+#### Feedback. "Your bar chart is meaninglessly colorful"
 
 The essence of the bar chart is big different survival rate. So, I
 visually differentiated the survival rate but the color choise was bad -
 yellow and red, which just looks like a meaningless cosmetics for the
 bar. Later, I picked a same color hue.
 
-#### Feedback. "You would be better try 'clustering' such as 'k-means clustering' to segregate family as more mathematical and objective method[¶](#Feedback.-"You-would-be-better-try-'clustering'-such-as-'k-means-clustering'-to-segregate-family-as-more-mathematical-and-objective-method) {#Feedback.-"You-would-be-better-try-'clustering'-such-as-'k-means-clustering'-to-segregate-family-as-more-mathematical-and-objective-method}
+#### Feedback. "You would be better try 'clustering' such as 'k-means clustering' to segregate family as more mathematical and objective method
 
 It was an objection on my method of clustering the passengers. I heard
 of 'k-means clustering' at the machine learning class, but my experience
@@ -118,14 +118,14 @@ of clustering each families.
 -   scikit-learn 'k-means clustering' :
     [http://scikit-learn.org/stable/auto\_examples/cluster/plot\_cluster\_iris.html](http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_iris.html)
 
-#### Feedback. "What if the name has slight typos, is that ignorable?"[¶](#Feedback.--"What-if-the-name-has-slight-typos,-is-that-ignorable?") {#Feedback.--"What-if-the-name-has-slight-typos,-is-that-ignorable?"}
+#### Feedback. "What if the name has slight typos, is that ignorable?"
 
 It was also a questioning on data preparation not visualization. I admit
 that 'Andersson' and 'Anderson' might be the same and Ticket '33345' and
 '3345' might be result of human mistake. Maybe I will have to invest
 more time on the comparison logics. I agree.
 
-### Resources[¶](#Resources) {#Resources}
+### Resources 
 
 -   References to general knowledge on passengers, ticket and cabin on
     Titanic
@@ -184,7 +184,7 @@ To show/hide the raw python code in Supplement section, click
 [here](javascript:code_toggle()). The raw code for this IPython notebook
 is by default hidden for easier reading.
 
-### Supplement. Data Preparation Steps for the Visualization in Tableau[¶](#Supplement.-Data-Preparation-Steps-for-the-Visualization-in-Tableau) {#Supplement.-Data-Preparation-Steps-for-the-Visualization-in-Tableau}
+### Supplement. Data Preparation Steps for the Visualization in Tableau
 
 To extract families, the first step is to wrangle the data in order to
 tokenize features that can be then easily compared among passengers. For
@@ -250,7 +250,7 @@ which were prepared as new columns in **df** DataFrame ( exported as
 -   Cabin naming convention : new 'Cabin\_' column will be created to
     investigate to see the same numeric pattern exists
 
-#### Detail.1. Data preparation to calculate similarity among passengers[¶](#Detail.1.-Data-preparation-to-calculate-similarity-among-passengers) {#Detail.1.-Data-preparation-to-calculate-similarity-among-passengers}
+#### Detail.1. Data preparation to calculate similarity among passengers
 
 In [2]:
 
@@ -300,7 +300,7 @@ In [3]:
     # FamilySize : new column for convenience, of accessing family size (siblings/husbands/wives + children and parents and oneself)
     df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
 
-#### Detail.2. Cross-check among the passengers to calculate 'SimilarityScore'[¶](#Detail.2.-Cross-check-among-the-passengers-to-calculate-'SimilarityScore') {#Detail.2.-Cross-check-among-the-passengers-to-calculate-'SimilarityScore'}
+#### Detail.2. Cross-check among the passengers to calculate 'SimilarityScore'
 
 In [4]:
 
@@ -348,7 +348,7 @@ In [4]:
     # export for Tableau
     dfSM.to_csv('titanic-data_similarity.csv')  
 
-#### Detail.3. New columns for Ticket/Cabin naming convention analysis[¶](#Detail.3.-New-columns-for-Ticket/Cabin-naming-convention-analysis) {#Detail.3.-New-columns-for-Ticket/Cabin-naming-convention-analysis}
+#### Detail.3. New columns for Ticket/Cabin naming convention analysis
 
 In [5]:
 
